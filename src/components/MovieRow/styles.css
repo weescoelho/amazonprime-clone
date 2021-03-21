@@ -1,0 +1,13 @@
+.movieRow-item{
+  display: inline-block;
+}
+
+.movieRow-area{
+  overflow: hidden;
+  width: 99999px;
+}
+
+.movieRow-item img{
+  width: 150px;
+  transform: scale(.9);
+}

@@ -1,0 +1,16 @@
+.watchingRow-area{
+  overflow: hidden;
+  width: 99999px;
+}
+
+.watchingRow-item{
+  display: inline-block;
+}
+.watchingRow-item img{
+  transform:scale(.98)
+}
+.watchingProgress{
+  width: 294px;
+  height: 5px;
+  background-color:#00AAE1;
+}

@@ -1,0 +1,14 @@
+.timeBar{
+  width: 294px;
+  height: 6px;
+  background:#fff;
+  margin-left: 3px;
+  border-radius: 6px;
+}
+
+.timeBar-progress{
+  width: 150px;
+  height: 6px;
+  background:#00AAE1;
+  border-radius: 6px;
+}

@@ -1,0 +1,12 @@
+.exclusiveMovieRow-item{
+  display: inline-block;
+}
+
+.exclusiveMovieRow-area{
+  overflow: hidden;
+  width: 9999px;
+}
+
+.exclusiveMovieRow-item img{
+transform: scale(.98);
+}

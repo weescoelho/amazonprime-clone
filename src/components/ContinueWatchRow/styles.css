@@ -1,6 +1,10 @@
 .watchingRow-area{
-  overflow: hidden;
-  width: 99999px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.watchingRow-list{
+  transition: all ease .3s;
 }
 
 .watchingRow-item{
@@ -13,4 +17,48 @@
   width: 294px;
   height: 5px;
   background-color:#00AAE1;
+}
+
+.watchingRow--left{
+  position: absolute;
+  width: 40px;
+  color:#fff;
+  height: 170px;
+  background: linear-gradient(to right, rgba(0,0,0,.4)5%,transparent 90%);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor:pointer;
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.watchingRow--right{
+  position: absolute;
+  width: 40px;
+  color:#fff;
+  height: 170px;
+  background: linear-gradient(to left,rgba(0,0,0,.4) 5%,transparent 90%);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor:pointer;
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.watchingRow--left{
+  left:0;
+}
+
+.watchingRow--right{
+  right:0;
+}
+
+.watchingRow:hover .watchingRow--left, .watchingRow:hover .watchingRow--right{
+  opacity: 1;
 }

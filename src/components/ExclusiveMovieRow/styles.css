@@ -1,12 +1,69 @@
+.exclusiveMovieRow h2{
+  margin-bottom: 16px;
+}
+
 .exclusiveMovieRow-item{
   display: inline-block;
 }
 
 .exclusiveMovieRow-area{
-  overflow: hidden;
-  width: 9999px;
+  overflow-x: hidden;
+  position:relative;
 }
 
 .exclusiveMovieRow-item img{
 transform: scale(.98);
+transition: all ease .3s;
+}
+
+.exclusiveMovieRow-item img:hover{
+  transform: scale(1);
+  }
+
+.exclusiveMovieRow-list{
+  transition: all ease .3s;
+}
+
+.exclusiveMovieRow--left{
+  position: absolute;
+  width: 40px;
+  color:#fff;
+  height: 450px;
+  background: linear-gradient(to right, rgba(0,0,0,.4)5%,transparent 90%);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor:pointer;
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.exclusiveMovieRow--right{
+  position: absolute;
+  width: 40px;
+  color:#fff;
+  height: 450px;
+  background: linear-gradient(to left,rgba(0,0,0,.4) 5%,transparent 90%);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor:pointer;
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.exclusiveMovieRow--left{
+  left:0;
+}
+
+.exclusiveMovieRow--right{
+  right:0;
+}
+
+.exclusiveMovieRow:hover .exclusiveMovieRow--left, .exclusiveMovieRow:hover .exclusiveMovieRow--right{
+  opacity: 1;
 }

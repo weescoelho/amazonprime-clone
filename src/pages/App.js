@@ -38,16 +38,16 @@ function App() {
   return (
     <div className="container">
       <section className="movie-lists">
-        <div className="exclusive-movie-list">
+        { <div className="exclusive-movie-list">
           {exclusiveMovies.map((item) => (
             <ExclusiveMovieRow title={item.title} items={item.items} />
           ))}
-        </div>
-        <div className="continueWatch-list">
+        </div>}
+        {<div className="continueWatch-list">
           {watchingMovieList.map((item) => (
             <ContinueWatchRow title={item.title} items={item.items}/>
           ))}
-        </div>
+        </div>}
         <div>
           {movieList.map((item, key) => (
             <MovieRow key={key} title={item.title} items={item.items} />

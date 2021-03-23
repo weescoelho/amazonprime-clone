@@ -25,7 +25,7 @@ const MovieRow = ({ title, items }) => {
 
   return (
     <div className="movieRow">
-      <h2>{title}</h2>
+      <h2>{title} <span class="more-link"><a href="#">Ver mais</a> </span></h2>
 
       <div className="movieRow-area">
         <div className="movieRow--left" onClick={handleLeftArrow}>

@@ -4,38 +4,41 @@ import React, { useEffect, useState } from "react";
 import MovieRow from "../components/MovieRow";
 import ExclusiveMovieRow from "../components/ExclusiveMovieRow";
 import ContinueWatchRow from "../components/ContinueWatchRow";
+import FeaturedMovie from "../components/FeaturedMovie";
 
 function App() {
   const [movieList, setMovieList] = useState([]);
   const [exclusiveMovies, setExclusiveMovies] = useState([]);
   const [watchingMovieList, setWatchingMovieList] = useState([]);
+  const [featureData, setFeatureData] = useState(null);
 
   useEffect(() => {
     async function loadList() {
       let list = await Tmdb.getHomeList();
       setMovieList(list);
+      let listMovieExclusive = await Tmdb.getMovieExclusive();
+      setExclusiveMovies(listMovieExclusive);
+      let listWatchingMovies = await Tmdb.getWatchingMovies();
+      setWatchingMovieList(listWatchingMovies);
+
+
+       // Pegando o filme em destaque
+       let originals = listMovieExclusive.filter((i) => i.slug === "originals");
+       let randomChosen = Math.floor(
+         Math.random() * (originals[0].items.results.length - 1),
+       );
+       let chosen = originals[0].items.results[randomChosen];
+       let chosenInfo = await Tmdb.getMovieInfo(chosen.id, "tv");
+       setFeatureData(chosenInfo);
+
     }
     loadList();
   }, []);
 
-  useEffect(() => {
-    async function loadList() {
-      let list = await Tmdb.getMovieExclusive();
-      setExclusiveMovies(list);
-    }
-    loadList();
-  }, []);
-
-  useEffect(() => {
-    async function loadList() {
-      let list = await Tmdb.getWatchingMovies();
-      setWatchingMovieList(list);
-      console.log(list);
-    }
-    loadList();
-  }, [])
 
   return (
+    <>
+    <div>{featureData && <FeaturedMovie item={featureData}/>}</div>
     <div className="container">
       <section className="movie-lists">
         { <div className="exclusive-movie-list">
@@ -55,6 +58,7 @@ function App() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

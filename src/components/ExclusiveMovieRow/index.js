@@ -24,7 +24,7 @@ const ExclusiveMovieRow = ({ title, items }) => {
   };
   return (
     <div className="exclusiveMovieRow">
-      <h2>{title}</h2>
+      <h2>{title} <span class="more-link"><a href="#">Ver mais</a> </span></h2>
       <div className="exclusiveMovieRow-area">
         <div className="exclusiveMovieRow--left" onClick={handleLeftArrow}>
           <NavigateBeforeIcon style={{ fontSize: 50 }} />

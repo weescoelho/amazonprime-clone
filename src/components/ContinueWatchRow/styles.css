@@ -1,3 +1,28 @@
+.watchingRow{
+  margin-top: 16px;
+}
+
+.watchingRow h2{
+  margin-bottom: 4px;
+  font-size:18px;
+  display: flex;
+  align-items: center;
+}
+
+.more-link{
+  margin-left: 4px;
+}
+
+.more-link a{
+  font-size: 12px;
+  text-decoration: none;
+  color:#00AAE1;
+}
+
+.more-link a:hover{
+  text-decoration: underline;
+}
+
 .watchingRow-area{
   overflow-x: hidden;
   position: relative;

@@ -5,6 +5,7 @@ import MovieRow from "../components/MovieRow";
 import ExclusiveMovieRow from "../components/ExclusiveMovieRow";
 import ContinueWatchRow from "../components/ContinueWatchRow";
 import FeaturedMovie from "../components/FeaturedMovie";
+import Header from "../components/Header";
 
 function App() {
   const [movieList, setMovieList] = useState([]);
@@ -38,6 +39,7 @@ function App() {
 
   return (
     <>
+    <Header/>
     <div>{featureData && <FeaturedMovie item={featureData}/>}</div>
     <div className="container">
       <section className="movie-lists">

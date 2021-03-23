@@ -34,10 +34,18 @@
 
 .watchingRow-item{
   display: inline-block;
+  transition: .3s ease;
 }
 .watchingRow-item img{
-  transform:scale(.98)
+  transform:scale(.98);
+  transition: .3s ease;
 }
+
+.watchingRow-item img:hover{
+  transform:scale(1);
+  transition: .3s ease;
+}
+
 .watchingProgress{
   width: 294px;
   height: 5px;

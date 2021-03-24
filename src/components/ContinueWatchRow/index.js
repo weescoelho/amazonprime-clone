@@ -26,7 +26,7 @@ const ContinueWatchRow = ({ title, items }) => {
   
   return (
     <div className="watchingRow">
-      <h2>{title}<span class="more-link"><a href="#">Ver mais</a> </span></h2>
+      <h2>{title}<span class="more-link"><a href="/">Ver mais</a> </span></h2>
       <div className="watchingRow-area">
         <div className="watchingRow--left" onClick={handleLeftArrow}>
           <NavigateBeforeIcon style={{ fontSize: 50 }} />

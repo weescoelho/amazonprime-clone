@@ -25,8 +25,8 @@ const FeaturedMovie = ({item}) => {
           <p className="featured-description">{description}</p>
           <p className="featured-duration">Duração: {item.episode_run_time[0]} min.</p>
           <div>
-            <a href="#" className="watch-button">► Assistir</a>
-            <a href="#" className="add-favoriteList-button">+</a>
+            <a href="/" className="watch-button">► Assistir</a>
+            <a href="/" className="add-favoriteList-button">+</a>
           </div>
           </div>
         </div>

@@ -36,11 +36,6 @@ export default {
         title: "Romance",
         items: await basicFetch(`/discover/movie?with_genres=10749&language=pt-BR&api_key=${API_KEY}`),
       },
-      {
-        slug: "documentary",
-        title: "Documentários",
-        items: await basicFetch(`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`),
-      },
     ]
   },
   getMovieExclusive: async () => {

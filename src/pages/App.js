@@ -58,8 +58,29 @@ function App() {
             <MovieRow key={key} title={item.title} items={item.items} />
           ))}
         </div>
+        <footer>
+        <p>
+          Feito por Weslley Coelho{" "}
+          <span role="img" aria-label="heart">
+            ❤
+          </span>
+        </p>
+        <p>Direitos de imagem para Amazon.</p>
+        <p>
+          {" "}
+          API <a href="https://www.themoviedb.org/">TheMovieDB</a>
+        </p>
+      </footer>
       </section>
     </div>
+    {movieList.length <= 0 && (
+        <div className="loading">
+          <img
+            src="https://i.pinimg.com/originals/96/cb/ea/96cbeaa2b2d1052056b4c78815774575.gif"
+            alt="Carregando"
+          />
+        </div>
+      )}
     </>
   );
 }

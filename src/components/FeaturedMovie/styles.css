@@ -9,7 +9,7 @@
 .featured-vertical{
   width: inherit;
   height: inherit;
-  background: linear-gradient(to top, #1A242F 5%,transparent 100%)
+  background: linear-gradient(to top, #1A242F 5%,transparent 90%)
 }
 
 .featured-header{
@@ -19,6 +19,13 @@
 .featured-content-container{
   max-width: 1140px;
   margin:80px auto 0 auto;
+}
+
+@media(max-width:739px){
+  .featured-content-container{
+    max-width: 350px;
+    margin:40px auto 0 auto;
+  }
 }
 
 .x-ray-support,.featured-imdb{
@@ -76,5 +83,19 @@
 .add-favoriteList-button:hover{
   background:#00AAE1;
   color:#fff;
+}
+
+/* Responsive */
+
+@media(max-width:739px){
+  .featured-content-container{
+    max-width: 350px;
+    margin:60px auto 0 auto;
+  }
+  .featured-title{
+    font-size:36px;
+    margin-bottom: 8px;
+    color:#fff;
+  }
 }
 

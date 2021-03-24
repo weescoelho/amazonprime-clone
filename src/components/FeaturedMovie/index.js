@@ -7,7 +7,6 @@ const FeaturedMovie = ({item}) => {
   if(description.length > 200){
     description = description.substring(0,200) + '...'
   }
-console.log(item)
 
   return (
     <section className="featured" style={{
